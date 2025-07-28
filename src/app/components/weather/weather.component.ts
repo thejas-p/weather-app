@@ -25,6 +25,7 @@ export class WeatherComponent {
         },
         (error: any) => {
           console.error('error fetching weather data', error);
+          alert('Could not fetch weather data. Please try again later.');
         }
       );
     }
