@@ -3,12 +3,5 @@
     <h2>Weather App</h2>
     <input type="text" [(ngModel)]="city" placeholder="enter city name"/>
     <button (click)="getWeather()">Get weather</button>
-
-    <div *ngIf="weatherData">
-        <h3>{{weatherData.name}},{{weatherData.sys.country}}</h3>
-        <p>Temperature:{{weatherData.main.temp}}C</p>
-        <p>weather:{{weatherData.weather[0].description}}</p>
-        <p>Humidity:{{weatherData.main.humidity}}%</p>
-
-    </div>
 </div>
+<app-weather-details *ngIf="weatherData" [data]="weatherData"></app-weather-details>

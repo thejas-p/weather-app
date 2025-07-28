@@ -3,11 +3,12 @@ import { WeatherService } from '../../services/weather.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {WeatherDetailsComponent} from '../weather-details/weather-details.component';
 
 @Component({
   selector: 'app-weather',
   standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule],
+  imports: [CommonModule, FormsModule, HttpClientModule, WeatherDetailsComponent],
   templateUrl: './weather.component.html',
   styleUrl: './weather.component.scss',
 })
